@@ -141,9 +141,9 @@ port 1194
 proto tcp
 dev tun
 server 10.8.0.0 255.255.255.0
-ca ca.crt
-cert white-vps.crt
-key white-vps.key
+ca easy-rsa/keys/ca.crt
+cert easy-rsa/keys/white-vps.crt
+key easy-rsa/keys/white-vps.key
 dh dh2048.pem
 push "redirect-gateway def1 bypass-dhcp"
 push "dhcp-option DNS 8.8.8.8"
