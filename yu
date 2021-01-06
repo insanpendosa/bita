@@ -130,8 +130,9 @@ connect-retry 0 1
 nice -20
 reneg-sec 0
 http-proxy $IPADDRESS 3128
-
 END
+sed -i $MYIP2 /etc/openvpn/noload.ovpn;
+
 echo '<ca>' >> /etc/openvpn/noload.ovpn
 cat /etc/openvpn/ca.crt >> /etc/openvpn/noload.ovpn
 echo '</ca>' >> /etc/openvpn/noload.ovpn
@@ -144,6 +145,8 @@ echo '</key>' >> /etc/openvpn/noload.ovpn
 echo '<tls-auth>' >> /etc/openvpn/noload.ovpn
 cat /etc/openvpn/ta.key >> /etc/openvpn/noload.ovpn
 echo '</tls-auth>' >> /etc/openvpn/noload.ovpn
+
+cp /etc/openvpn/noload.ovpn /home/vps/public_html/noload.ovpn
 # create tu200 openvpn config
 
 cat > /etc/openvpn/tu200.ovpn <<-END
