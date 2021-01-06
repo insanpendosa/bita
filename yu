@@ -224,7 +224,6 @@ rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/ara-rangers/vps/master/nginx.conf"
 mkdir -p /home/vps/public_html
 echo "<?php phpinfo(); ?>" > /home/vps/public_html/info.php
-wget -O /home/vps/public_html/index.html https://raw.githubusercontent.com/padubang/secret/main/index.html
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/padubang/mambang/main/vps.conf"
 service nginx restart
 
