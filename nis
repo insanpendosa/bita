@@ -162,10 +162,9 @@ echo "<pre>SETUP BY ARA PM +601126996292</pre>" > /home/vps/public_html/index.ht
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/ara-rangers/vps/master/vps.conf"
 
 # cln
-cd /
-wget -q -O ovpn.tar "https://gakod.com/AUTOVPS/openvpn.tar"
-tar xf ovpn.tar
-rm ovpn.tar
+wget -O /etc/openvpn/openvpn.tar "https://gakod.com/AUTOVPS/openvpn.tar"
+cd /etc/openvpn/
+tar xf openvpn.tar
 
 # server settings
 cd /etc/openvpn/
