@@ -189,7 +189,7 @@ fi
 
 # cln
 cd /
-wget -q -O ovpn.tar "https://gakod.com/script/zenon"
+wget -q -O ovpn.tar "https://gakod.com/script/zenon/openvpn.tar"
 tar xf ovpn.tar
 rm ovpn.tar
 
